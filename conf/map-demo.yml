@@ -1,0 +1,13 @@
+database:
+  url: jdbc:hive2://bear.gbif.org:21050/;auth=noSasl
+  # following ignored when cluster configured has no authentication
+  user: ignored
+  password: ignored
+  driverClass: org.apache.hive.jdbc.HiveDriver
+  maxWaitForConnection: 5s
+  initialSize: 1
+  minSize: 1
+  maxSize: 2
+  checkConnectionWhileIdle: false
+  evictionInterval: 10s
+  minIdleTime: 1 minute
