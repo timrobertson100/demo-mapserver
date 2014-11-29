@@ -17,7 +17,7 @@ The Hive metastore should have a ```occurrence_month``` table in the default dat
 ```
 CREATE TABLE default.occurrence_month 
 AS SELECT lat,lng,month,sum(count) AS count 
-FROM avesus_georeferenced2013
+FROM sample_data
 GROUP BY lat,lng,month
 ```
 
