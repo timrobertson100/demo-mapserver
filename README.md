@@ -1,7 +1,7 @@
 demo-mapserver
 ==============
 
-A demo mapserver for use in the big data course.  This is a simple Impala backed restful Dropwizard framework.
+A demo mapserver for use in the big data course.  This is a simple Impala backed RESTful service built on the Dropwizard framework.
 
 To run:
   1. ```mvn package``` 
