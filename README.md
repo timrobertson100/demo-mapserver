@@ -9,6 +9,23 @@ To run:
   3. ```java -jar target/mapserver-1.0-SNAPSHOT.jar server conf/map-demo.yml```
   4. point your browser at http://localhost:8080/ for all data or http://localhost:8080/?month=1 for e.g. January.
 
+The response should be JSON, similar to:
+```
+[
+  {
+    lat: 18.899999618530273,
+    lng: -155.6999969482422,
+    count: 16
+  },
+  {
+    lat: 19.100000381469727,
+    lng: -155.8000030517578,
+    count: 11
+  }
+  ...etc...
+]
+```
+
 The Hive metastore should have a ```occurrence_month``` table in the default database.  This can be created by:
   1. Downloading the sample data from http://dx.doi.org/10.5281/zenodo.12975
   2. Creating a table ```sample_data``` using that CSV
