@@ -5,7 +5,7 @@ A demo mapserver for use in the big data course.  This is a simple Impala backed
 
 To run:
   1. ```mvn package``` 
-  2. edit the ```conf/mapserver-demo.yml```
+  2. edit the ```conf/map-demo.yml```
   3. ```java -jar target/mapserver-1.0-SNAPSHOT.jar server conf/map-demo.yml```
   4. point your browser at http://localhost:8080 which should show a map as follows:  
   ![Sample](docs/images/sample.png)    
