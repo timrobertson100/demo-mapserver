@@ -88,6 +88,11 @@
       <artifactId>dropwizard-jdbi</artifactId>
       <version>${dropwizard.version}</version>
     </dependency>
+    <dependency>
+      <groupId>io.dropwizard</groupId>
+      <artifactId>dropwizard-assets</artifactId>
+      <version>${dropwizard.version}</version>
+    </dependency>
 
     <!--
       BEGIN: All impala dependencies follow.

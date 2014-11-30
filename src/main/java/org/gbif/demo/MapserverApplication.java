@@ -5,6 +5,7 @@ import org.gbif.demo.health.ImpalaHealth;
 import org.gbif.demo.resources.MapResource;
 
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.jdbi.DBIFactory;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -21,6 +22,8 @@ public class MapserverApplication extends Application<MapserverConfiguration> {
 
   @Override
   public void initialize(Bootstrap<MapserverConfiguration> bootstrap) {
+    // set up the client app
+    bootstrap.addBundle(new AssetsBundle("/app", "/", "index.html"));
   }
 
   public static void main(String[] args) throws Exception {
@@ -29,6 +32,9 @@ public class MapserverApplication extends Application<MapserverConfiguration> {
 
   @Override
   public void run(MapserverConfiguration config, Environment environment) throws Exception {
+    // set the web services to come from /api
+    environment.jersey().setUrlPattern("/api/*");
+
     // configure the data access
     final DBIFactory factory = new DBIFactory();
     final DBI jdbi = factory.build(environment, config.getDataSourceFactory(), "impala");

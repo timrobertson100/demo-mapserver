@@ -7,7 +7,8 @@ To run:
   1. ```mvn package``` 
   2. edit the ```conf/mapserver-demo.yml```
   3. ```java -jar target/mapserver-1.0-SNAPSHOT.jar server conf/map-demo.yml```
-  4. point your browser at http://localhost:8080/ for all data or http://localhost:8080/?month=1 for e.g. January.
+  4. point your browser at http://localhost:8080 which should show a map 
+  5. point your browser at http://localhost:8080/api for all data or e.g. http://localhost:8080/api?month=1 for January.
 
 The response should be JSON, similar to:
 ```
